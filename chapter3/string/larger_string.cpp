@@ -13,10 +13,10 @@ int main() {
   if (s1 == s2) {
     cout << "equal" << endl;
   } else if (s1 > s2) {
-    cout << "s1 is larger" << endl;
+    cout << std::format("s1 = {} is larger than s2 = {}", s1, s2) << endl;
   } else {
-    cout << "s2 is larger" << endl;
-    // cout << std::format("s2 = {} is larger than s1 = {}", s2, s1) << endl;
+    // cout << "s2 is larger" << endl;
+    cout << std::format("s2 = {} is larger than s1 = {}", s2, s1) << endl;
   }
   return 0;
 }
