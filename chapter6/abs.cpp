@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdint>
 
 template <typename T> T myAbs(T a) {
   if (a < 0)

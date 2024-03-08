@@ -9,6 +9,8 @@ using std::ostream;
 using std::string;
 class Person {
 public:
+  string name{};
+  string address{};
   friend istream &operator>>(istream &is, Person &item);
   Person() = default;
   Person(const string &name_s, const string &address_s)
@@ -18,8 +20,7 @@ public:
   string get_addr() const { return address; }
 
 private:
-  string name{};
-  string address{};
+  
 };
 
 istream &operator>>(istream &is, Person &item);
@@ -34,4 +35,5 @@ inline ostream &operator<<(ostream &os, const Person &item) {
   os << item.get_name() << " " << item.get_addr();
   return os;
 }
+
 #endif
