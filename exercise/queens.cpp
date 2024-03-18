@@ -6,6 +6,18 @@ using std::vector;
 
 vector<vector<string>> ret;
 
+void showBoard(vector<string> &board) {
+  for (auto row : board) {
+    std::cout << row << std::endl;
+  }
+}
+
+void showRes(vector<vector<string>> &res) {
+  for (auto ele : res) {
+    showBoard(ele);
+  }
+}
+
 bool is_valid(vector<string> &board, int row, int col) {
   // check col
   for (int i = row; i >= 0; --i) {
@@ -23,18 +35,6 @@ bool is_valid(vector<string> &board, int row, int col) {
       return false;
   }
   return true;
-}
-
-void showBoard(vector<string> &board) {
-  for (auto row : board) {
-    std::cout << row << std::endl;
-  }
-}
-
-void showRes(vector<vector<string>> &res) {
-  for (auto ele : res) {
-    showBoard(ele);
-  }
 }
 
 void dfs(vector<string> &board, int row) {
